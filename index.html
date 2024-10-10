@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gwanwoo Song</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #e0f1ed;
+            color: #333;
+            margin: 0;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header-content {
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        nav {
+            display: flex;
+        }
+        nav a {
+            color: #333;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        nav a:last-child {
+            margin-right: 0;
+        }
+        nav a:hover {
+            color: #007BFF;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 80px auto 20px auto;
+            padding: 20px;
+            background-color: white;
+        }
+        .profile {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .profile img {
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            justify-self: center;
+        }
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .profile-info a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section:not(.profile) h2 {
+            color: #333;
+            font-size: 30px;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 10px;
+        }
+        #introduction {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 40px;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        #introduction p {
+            line-height: 1.6;
+            color: #050505;
+        }
+        #introduction ul {
+            padding-left: 20px;
+        }
+        #introduction li {
+            margin-bottom: 10px;
+            color: #161616;
+            line-height: 1.4;
+        }
+        .profile-info h2 {
+            margin: 0;
+            font-size: 38px;
+            font-weight: bold;
+        }
+        .profile-info p {
+            margin: 5px 0;
+            font-size: 20px;
+        }
+        .profile-info a {
+            color: #007BFF;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        footer {
+            background-color: #fff;
+            color: #333;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        footer a {
+            color: #007BFF;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .publication-item, .project-item {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .publication-item:hover, .project-item:hover {
+            transform: translateY(-5px);
+        }
+        .publication-item h3, .project-item h3 {
+            color: #21333a;
+            margin-top: 0;
+            font-size: 23px;
+        }
+        .publication-item p, .project-item p {
+            font-size: 20px;
+        }
+        .publication-info, .project-info {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .publication-links a, .project-links a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .publication-links a:hover, .project-links a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 1140px) {
+            .header-content, .container {
+                padding: 0 20px;
+            }
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            header h1 {
+                font-size: 20px;
+            }
+            nav a {
+                font-size: 14px;
+                margin: 0 10px;
+            }
+            .profile {
+                grid-template-columns: 1fr;
+            }
+            .profile img {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>Gwanwoo Song</h1>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#publications">Publications</a>
+                <a href="#projects">Projects</a>
+                <a href="#service">Service</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="profile" class="profile section">
+            <img src="profile.jpeg" alt="Profile Image">
+            <div class="profile-info">
+                <h2>Gwanwoo Song</h2>
+                <div class="profile-info-item">
+                    <p>Junior, Computer Science</p>
+                    <p>Yonsei University</p>
+                </div>
+                <p>
+                    <a href="https://github.com/longway13" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://x.com/GwanwooA" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="cv.pdf" target="_blank"><i class="far fa-file-alt"></i> CV</a>
+                </p>
+            </div>
+        </div>
+
+        <div id="introduction" class="section">
+            <p>I am a junior at Yonsei University, majoring in Computer Science. I'm involved in ongoing research projects and expanding my understanding of the field by studying cutting-edge works. I am currently exploring various research areas, gradually refining my research direction.</p>
+
+            <p>My research goal is to enable machines to <strong>reason and communicate as effectively as humans, or even better</strong>. To achieve this, I concentrate on the following key areas.</p>
+
+            <ul>
+                <li><strong>Self-Supervised and Unsupervised Learning for Language Models</strong>: Developing techniques that allow language models to learn autonomously from large-scale unstructured data, minimizing reliance on human feedback or preferences, and enhancing their ability to generalize.</li>
+                <li><strong>Complex Reasoning and Long-Horizon Tasks</strong>: Creating models that can break down complex problems, reason through intermediate steps, and plan for long-term outcomes.</li>
+                <li><strong>Reasoning Across Multiple Modalities</strong>: Enabling models to integrate and reason across different types of data (text, vision, audio), mimicking the way humans process information from diverse sources.</li>
+            </ul>
+        </div>
+        
+        <div id="publications" class="section">
+            <h2>Publications and Preprints</h2>
+            <div class="publication-item">
+                <h3>Web Agents with World Models: Learning and Leveraging Environment Dynamics in Web Navigation</h3>
+                <p class="publication-info">Hyeongjoo Chae, Namyoung Kim, Kai Tzu-iunn Ong, Minju Kwak, <span style="color: #007bff;">Gwanwoo Song</span>, Jihoon Kim, Seonghwan Kim, Dongha Lee, Jinyoung Yeo</p>
+                <p><em>Preprint</em></p>
+                <p class="publication-description">We propose a World-model-augmented (WMA) web agent for improved decision-making in long-horizon tasks. Our study reveals that current LLMs lack world models, leading to suboptimal performance in web navigation. To address this, we introduce a transition-focused observation abstraction method, which uses natural language descriptions to highlight key state changes between time steps.  Our emperical results show that our world models enhance agents' policy selection without additional training, offering superior cost- and time-efficiency compared to recent tree-search-based agents.</p>
+                <div class="publication-links">
+                    <a href="" target="_blank">Paper</a>
+                    <a href="https://github.com/kyle8581/WorldModelforWebNav" target="_blank">Code</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <h3>University Chatbot and Course Search Engine</h3>
+                <p class="project-info">AWS-YONSEI 2024 Winter Program</p>
+                <p class="project-description">We developed a chatbot using data from the "Everytime" community and a course search engine using Yonsei University's course catalog. We utilized the RAG technique with vector similarity search in the chatbot, enabling it to provide tailored answers to the user.The course search engine we built, which takes both course titles and descriptions into account, outperformed the university website in helping users find the courses they’re looking for, improving both speed and search quality.</p>
+                <div class="project-links">
+                    <a href="https://github.com/AWS-egongz/Main" target="_blank">Code</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="service" class="section">
+            <h2>Services</h2>
+            <h3>Reviewer</h3>
+            <ul>
+                <li>System-2 Reasoning Workshop, NeurIPS 2024</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
