@@ -10,21 +10,17 @@
 ############################
 
 # Name of website
-title: My website
+title: Gwanwoo's AI Quest
 
 # Your name to show in the footer
-author: Some Person
+author: Gwanwoo Song
 
 ###############################################
 # --- List of links in the navigation bar --- #
 ###############################################
 
 navbar-links:
-  About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+  About Me: "/homepage"
 
 ################
 # --- Logo --- #
@@ -50,12 +46,10 @@ round-avatar: true
 # You can change the order that they show up on the page by changing the order here.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "someone@example.com"
+  email: "sgw1213@yonsei.ac.kr"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  facebook: deanattali
-  github: daattali
-  twitter: daattali
-  patreon: DeanAttali
+  github: longway13
+  twitter: GwanwooA
   youtube: "@daattali"
   whatsapp: 15551212
 #  medium: yourname
@@ -94,8 +88,7 @@ rss-description: This website is a virtual proof that I'm awesome
 # Select which social network share links to show in posts
 share-links-active:
   twitter: true
-  facebook: true
-  linkedin: true
+  github: true
   vk: false
 
 # How to display the link to your website in the footer
