@@ -28,7 +28,7 @@
         }
         .header-content {
             width: 100%;
-            max-width: 1000px;
+            max-width: 1400px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -54,7 +54,7 @@
             color: #007BFF;
         }
         .container {
-            max-width: 1000px;
+            max-width: 1400px;
             margin: 80px auto 20px auto;
             padding: 20px;
             background-color: white;
@@ -195,6 +195,47 @@
                 margin-bottom: 10px;
             }
         }
+        
+        /* 프로젝트 이미지와 텍스트 레이아웃 */
+        .project-with-image {
+            display: grid;
+            grid-template-columns: 3fr 7fr;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .project-image {
+            text-align: center;
+        }
+        
+        .project-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        
+        .project-content h3 {
+            margin-top: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .project-with-image {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .project-image {
+                order: -1;
+            }
+        }
     </style>
 </head>
 <body>
@@ -217,7 +258,7 @@
             <div class="profile-info">
                 <h2>Gwanwoo Song</h2>
                 <div class="profile-info-item">
-                    <p>Junior, Computer Science</p>
+                    <p>Senior, Computer Science</p>
                     <p>Yonsei University</p>
                 </div>
                 <p>
@@ -229,39 +270,84 @@
         </div>
 
         <div id="introduction" class="section">
-            <p>I am a junior at Yonsei University, majoring in Computer Science. I'm involved in ongoing research projects and expanding my understanding of the field by studying cutting-edge works. I am currently exploring various research areas, gradually refining my research direction.</p>
+            <p>I am a senior Computer Science student at Yonsei University, with current interests in Reinforcement Learning and Robotics. Prior to this, I conducted research in Natural Language Processing, particularly on web-based agents.
+            </p>
 
-            <p>My research goal is to enable machines to <strong>reason and communicate as effectively as humans, or even better</strong>. To achieve this, I concentrate on the following key areas.</p>
-
-            <ul>
-                <li><strong>Self-Supervised and Unsupervised Learning for Language Models</strong>: Developing techniques that allow language models to learn autonomously from large-scale unstructured data, minimizing reliance on human feedback or preferences, and enhancing their ability to generalize.</li>
-                <li><strong>Complex Reasoning and Long-Horizon Tasks</strong>: Creating models that can break down complex problems, reason through intermediate steps, and plan for long-term outcomes.</li>
-                <li><strong>Reasoning Across Multiple Modalities</strong>: Enabling models to integrate and reason across different types of data (text, vision, audio), mimicking the way humans process information from diverse sources.</li>
-            </ul>
         </div>
         
         <div id="publications" class="section">
             <h2>Publications and Preprints</h2>
             <div class="publication-item">
-                <h3>Web Agents with World Models: Learning and Leveraging Environment Dynamics in Web Navigation</h3>
-                <p class="publication-info">Hyeongjoo Chae, Namyoung Kim, Kai Tzu-iunn Ong, Minju Kwak, <span style="color: #007bff;">Gwanwoo Song</span>, Jihoon Kim, Seonghwan Kim, Dongha Lee, Jinyoung Yeo</p>
-                <p><em>Preprint</em></p>
-                <p class="publication-description">We propose a World-model-augmented (WMA) web agent for improved decision-making in long-horizon tasks. Our study reveals that current LLMs lack world models, leading to suboptimal performance in web navigation. To address this, we introduce a transition-focused observation abstraction method, which uses natural language descriptions to highlight key state changes between time steps.  Our emperical results show that our world models enhance agents' policy selection without additional training, offering superior cost- and time-efficiency compared to recent tree-search-based agents.</p>
-                <div class="publication-links">
-                    <a href="" target="_blank">Paper</a>
-                    <a href="https://github.com/kyle8581/WorldModelforWebNav" target="_blank">Code</a>
+                <div style="display: grid; grid-template-columns: 3fr 7fr; gap: 30px; align-items: center;">
+                    <div style="text-align: center;">
+                        <img src="webagent_fig.svg" alt="Web Agent Figure" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    </div>
+                    <div>
+                        <h3>Web Agents with World Models: Learning and Leveraging Environment Dynamics in Web Navigation</h3>
+                        <p class="publication-info">Hyeongjoo Chae, Namyoung Kim, Kai Tzu-iunn Ong, Minju Kwak, <span style="color: #007bff;">Gwanwoo Song</span>, Jihoon Kim, Seonghwan Kim, Dongha Lee, Jinyoung Yeo</p>
+                        <p><em>Preprint</em></p>
+                        <p class="publication-description">We propose a World-model-augmented (WMA) web agent for improved decision-making in long-horizon tasks. Our study reveals that current LLMs lack world models, leading to suboptimal performance in web navigation. To address this, we introduce a transition-focused observation abstraction method, which uses natural language descriptions to highlight key state changes between time steps.  Our emperical results show that our world models enhance agents' policy selection without additional training, offering superior cost- and time-efficiency compared to recent tree-search-based agents.</p>
+                        <div class="publication-links">
+                            <a href="https://arxiv.org/abs/2410.13232">Paper</a>
+                            <a href="https://github.com/kyle8581/WorldModelforWebNav" target="_blank">Code</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div id="projects" class="section">
             <h2>Projects</h2>
-            <div class="project-item">
-                <h3>University Chatbot and Course Search Engine</h3>
-                <p class="project-info">AWS-YONSEI 2024 Winter Program</p>
-                <p class="project-description">We developed a chatbot using data from the "Everytime" community and a course search engine using Yonsei University's course catalog. We utilized the RAG technique with vector similarity search in the chatbot, enabling it to provide tailored answers to the user.The course search engine we built, which takes both course titles and descriptions into account, outperformed the university website in helping users find the courses they’re looking for, improving both speed and search quality.</p>
-                <div class="project-links">
-                    <a href="https://github.com/AWS-egongz/Main" target="_blank">Code</a>
+            <div class="project-item project-with-image">
+                <div class="project-image">
+                    <img src="everytime_chatbot_pipeline.png" alt="Everytime Chatbot Pipeline">
+                </div>
+                <div class="project-content">
+                    <div>
+                        <h3>University Chatbot and Course Search Engine</h3>
+                        <p class="project-info">AWS-YONSEI 2024 Winter Program</p>
+                        <p class="project-description">We developed a chatbot using data from a university community platform and a course search engine based on Yonsei University's course catalog.
+                            The chatbot leverages RAG with vector similarity search to provide appropriate responses to users.
+                            The course search engine achieves fast inference by building an inverted index for efficient retrieval.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/AWS-egongz/Main" target="_blank">Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-item project-with-image">
+                <div class="project-image">
+                    <img src="agent_hak_fig.svg" alt="AI Agent for Finance Risk Detection">
+                </div>
+                <div class="project-content">
+                    <div>
+                        <h3>AI Agent for Finance Risk Detection</h3>
+                        <p class="project-info">YBIGTA x UPSTAGE AI Agent Hakathon 2025</p>
+                        <p class="project-description">We developed a RAG-based agent that helps users identify potential risks in financial products.
+                            To support this, we collected financial dispute cases and legal documents to build a structured database.
+                            When a user inputs a financial product, the agent highlights potentially risky sentences in a PDF viewer.
+                            Additionally, users can ask follow-up questions, such as simulations of possible future outcomes or inquiries about related financial information.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/longway13/FinanceGuard" target="_blank">Code</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-item project-with-image">
+                <div class="project-image">
+                    <img src="data_viz.gif" alt="암과 음주 담배의 상관관계 세계 추이">
+                </div>
+                <div class="project-content">
+                    <div>
+                        <h3>Visualizing Global Health Risks: Smoking, Drinking, and Cancer Rates</h3>
+                        <p class="project-info">2024-1 Data Visualization Course Project</p>
+                        <p class="project-description">We collected and visualized time-series data on organ-specific cancer incidence, smoking, and alcohol consumption across countries. The interface includes an interactive human body diagram—when a user clicks on an organ, related scatter plots and line charts appear, showing cancer incidence alongside relevant lifestyle factors.
+                            For visualizing country-level trends, we used a grid cartogram to present the data in an interactive and intuitive way.</p>
+                    </div>
+                    <div class="project-links">
+                        <!-- 링크는 나중에 추가 -->
+                    </div>
                 </div>
             </div>
         </div>
