@@ -11,10 +11,10 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            background-color: white;
         }
         header {
-            background-color: #e0f1ed;
+            background-color: white;
             color: #333;
             margin: 0;
             padding: 20px 0;
@@ -105,6 +105,14 @@
             margin-bottom: 10px;
             color: #161616;
             line-height: 1.4;
+        }
+        #introduction a {
+            color: #3478f6;
+            text-decoration: none;
+        }
+        #introduction a:hover {
+            text-decoration: none;
+            color: #3478f6;
         }
         .profile-info h2 {
             margin: 0;
@@ -258,7 +266,7 @@
             <div class="profile-info">
                 <h2>Gwanwoo Song</h2>
                 <div class="profile-info-item">
-                    <p>Senior, Computer Science</p>
+                    <p>Undergraduate, Computer Science</p>
                     <p>Yonsei University</p>
                 </div>
                 <p>
@@ -270,13 +278,14 @@
         </div>
 
         <div id="introduction" class="section">
-            <p>I am a senior Computer Science student at Yonsei University, with current interests in Reinforcement Learning and Robotics. Prior to this, I conducted research in Natural Language Processing, particularly on web-based agents.
-            </p>
+            <p>I am a undergraduate student at Yonsei University majoring in Computer Science. Currently, I'm tackling the problems of reinforcement learning and robotics, advised by <a href="https://youngwoon.github.io/youngwoon" target="_blank">Prof. Youngwoon Lee</a>.</p>
+            
+            <p>Prior to this, I worked as a research intern at <a href="https://langlab.yonsei.ac.kr/" target="_blank">LangAGI lab</a>, conducting research on LLM-based web agents.</p>
 
         </div>
         
         <div id="publications" class="section">
-            <h2>Publications and Preprints</h2>
+            <h2>Publications</h2>
             <div class="publication-item">
                 <div style="display: grid; grid-template-columns: 3fr 7fr; gap: 30px; align-items: center;">
                     <div style="text-align: center;">
@@ -298,23 +307,7 @@
 
         <div id="projects" class="section">
             <h2>Projects</h2>
-            <div class="project-item project-with-image">
-                <div class="project-image">
-                    <img src="everytime_chatbot_pipeline.png" alt="Everytime Chatbot Pipeline">
-                </div>
-                <div class="project-content">
-                    <div>
-                        <h3>University Chatbot and Course Search Engine</h3>
-                        <p class="project-info">AWS-YONSEI 2024 Winter Program</p>
-                        <p class="project-description">We developed a chatbot using data from a university community platform and a course search engine based on Yonsei University's course catalog.
-                            The chatbot leverages RAG with vector similarity search to provide appropriate responses to users.
-                            The course search engine achieves fast inference by building an inverted index for efficient retrieval.</p>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/AWS-egongz/Main" target="_blank">Code</a>
-                    </div>
-                </div>
-            </div>
+
             
             <div class="project-item project-with-image">
                 <div class="project-image">
@@ -347,6 +340,23 @@
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/Dongjae0324/infovis" target="_blank">Code</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-item project-with-image">
+                <div class="project-image">
+                    <img src="everytime_chatbot_pipeline.png" alt="Everytime Chatbot Pipeline">
+                </div>
+                <div class="project-content">
+                    <div>
+                        <h3>University Chatbot and Course Search Engine</h3>
+                        <p class="project-info">AWS-YONSEI 2023 Winter Program</p>
+                        <p class="project-description">We developed a chatbot using data from a university community platform and a course search engine based on Yonsei University's course catalog.
+                            The chatbot leverages RAG with vector similarity search to provide appropriate responses to users.
+                            The course search engine achieves fast inference by building an inverted index for efficient retrieval.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/AWS-egongz/Main" target="_blank">Code</a>
                     </div>
                 </div>
             </div>
